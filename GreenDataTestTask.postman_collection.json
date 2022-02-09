@@ -1,0 +1,390 @@
+{
+	"info": {
+		"_postman_id": "d02cde9b-0ee0-4ff3-93a1-bceeee9ad966",
+		"name": "GreenDataTestTask",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Bank",
+			"item": [
+				{
+					"name": "CreateBank",
+					"protocolProfileBehavior": {
+						"disableCookies": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"Банк11\",\r\n    \"bankIdentifier\":\"000000002\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/banks/create",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"banks",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UpdateBank",
+					"protocolProfileBehavior": {
+						"disableCookies": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\":\"1\",\r\n    \"name\":\"Банк2\",\r\n    \"bankIdentifier\":\"000000001\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/banks/update",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"banks",
+								"update"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteBank",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/banks/delete/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"banks",
+								"delete",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetBanks",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/banks/",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"banks",
+								""
+							],
+							"query": [
+								{
+									"key": "filterName",
+									"value": "bankIdentifier",
+									"disabled": true
+								},
+								{
+									"key": "filterValue",
+									"value": "2",
+									"disabled": true
+								},
+								{
+									"key": "orderBy",
+									"value": "name",
+									"disabled": true
+								},
+								{
+									"key": "orderDir",
+									"value": "desc",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Client",
+			"item": [
+				{
+					"name": "CreateClient",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"Клиент12\",\r\n    \"shortName\":\"к1\",\r\n    \"adress\":\"Пермь, Компрос 1, к.42\",\r\n    \"orgForm\":1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/clients/create",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"clients",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UpdateClient",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\":\"10\",\r\n    \"name\":\"Клиент12222\",\r\n    \"shortName\":\"к1\",\r\n    \"adress\":\"Пермь, Компрос 1, к.12233\",\r\n    \"orgForm\":1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/clients/update",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"clients",
+								"update"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteClient",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/clients/delete/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"clients",
+								"delete",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetClients",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/clients/",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"clients",
+								""
+							],
+							"query": [
+								{
+									"key": "filterName",
+									"value": "id",
+									"disabled": true
+								},
+								{
+									"key": "filterValue",
+									"value": "12",
+									"disabled": true
+								},
+								{
+									"key": "orderBy",
+									"value": "name",
+									"disabled": true
+								},
+								{
+									"key": "orderDir",
+									"value": "asc",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Deposit",
+			"item": [
+				{
+					"name": "CreateDeposit",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\r\n    \"clientIdentifier\":\"21\",\r\n    \"bankIdentifier\":\"26\",\r\n    \"percentage\":\"11\",\r\n    \"monthTerm\":\"16\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/deposits/create",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"deposits",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UpdateDeposit",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 10,\r\n    \"clientIdentifier\": 22,\r\n    \"bankIdentifier\": 27,\r\n    \"percentage\": 11,\r\n    \"monthTerm\": 16\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/deposits/update",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"deposits",
+								"update"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteDeposit",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/deposits/delete/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"deposits",
+								"delete",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetDeposits",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/deposits/",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"deposits",
+								""
+							],
+							"query": [
+								{
+									"key": "filterName",
+									"value": "percentage",
+									"disabled": true
+								},
+								{
+									"key": "filterValue",
+									"value": "12",
+									"disabled": true
+								},
+								{
+									"key": "orderBy",
+									"value": "id",
+									"disabled": true
+								},
+								{
+									"key": "orderDir",
+									"value": "desc",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
